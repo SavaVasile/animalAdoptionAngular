@@ -1,0 +1,52 @@
+<!--<div class="container" >-->
+<mat-drawer-container class="container">
+<mat-drawer mode="side" opened>
+  <h1>Edit User</h1>
+</mat-drawer>
+<mat-drawer-content class="content">
+  <form class="form" #userForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" required [(ngModel)]="user.name" name="name">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Phone Number</mat-label>
+        <input matInput type="tel" required [(ngModel)]="user.phone" name="phone">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" required [(ngModel)]="user.email" name="email">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Address</mat-label>
+        <input matInput type="text" required [(ngModel)]="user.address" name="address">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>User type</mat-label>
+        <input matInput type="text" required [(ngModel)]="user.userType" name="userType" placeholder="Admin/Normal">
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <div class="form-group">
+        <button button mat-raised-button color="primary" class="btn btn-success"
+                type="submit">Submit
+        </button>
+      </div>
+    </div>
+
+  </form>
+</mat-drawer-content>
+</mat-drawer-container>
+<!--
+</div>
+-->

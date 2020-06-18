@@ -1,0 +1,55 @@
+<div class="container"  >
+  <mat-drawer-container class="container">
+    <mat-drawer mode="side" opened>
+  <h1>Edit Animal</h1>
+    </mat-drawer>
+    <mat-divider vertical="true"></mat-divider>
+    <mat-drawer-content class="content">
+  <form #animalForm="ngForm" (ngSubmit)="onSubmit()">
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput type="text" required [(ngModel)]="animal.name" name="name">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Age</mat-label>
+      <input matInput type="number" required  [(ngModel)]="animal.age" name="age">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Sex</mat-label>
+      <input matInput type="text" required [(ngModel)]="animal.sex" name="sex" placeholder="Male/Female">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Breed</mat-label>
+      <input matInput type="text" required [(ngModel)]="animal.breed" name="breed">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <input matInput type="text" required [(ngModel)]="animal.description" name="description">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Photo</mat-label>
+      <input matInput type="url" [(ngModel)]="animal.photo" name="photo">
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <button mat-raised-button color="primary" class="btn btn-success"
+           type="submit" >Submit</button>
+  </div>
+  </form>
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+
+</div>
+

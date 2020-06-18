@@ -1,0 +1,33 @@
+<div class="container" style="padding: 13px;">
+  <h1>Make a Donation</h1>
+
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Amount: </mat-label>
+      <input matInput type="number" required [(ngModel)]="donation.sum" name="sum">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Details: </mat-label>
+      <input matInput type="text" [(ngModel)]="donation.details" name="details">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>User id:</mat-label>
+      <input matInput type="number" [(ngModel)]="donation.user" name="user">
+    </mat-form-field>
+  </div>
+
+
+  <div class="form-group">
+
+      <button button mat-raised-button color="primary" class="btn btn-success"
+              type="submit" name="submit_reg"
+              value="Add" (click)="(addDonation())">Submit
+      </button>
+  </div>
+
+
+</div>
